@@ -4,7 +4,7 @@ import {
   REQUEST_POSTS, RECEIVE_POSTS
 } from '../actions'
 
-const selectedSubreddit = (state = 'reactjs', action) => {
+export const selectedSubreddit = (state = 'reactjs', action) => {
   switch (action.type) {
     case SELECT_SUBREDDIT:
       return action.subreddit
@@ -43,7 +43,7 @@ const posts = (state = {
   }
 }
 
-const postsBySubreddit = (state = { }, action) => {
+export const postsBySubreddit = (state = {}, action) => {
   switch (action.type) {
     case INVALIDATE_SUBREDDIT:
     case RECEIVE_POSTS:
@@ -57,7 +57,7 @@ const postsBySubreddit = (state = { }, action) => {
   }
 }
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   postsBySubreddit,
   selectedSubreddit
 })
