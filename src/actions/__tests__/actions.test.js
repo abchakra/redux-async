@@ -79,10 +79,6 @@ describe('actions', () => {
                                     }
                            });
 
-                           // store.dispatch(actions.fetchPostsIfNeeded(subreddit));
-
-                           // expect(store.getActions()).toEqual([]);
-                           // expect(store.getActions()).toMatchObject(expectedActions);
                            store.dispatch(actions.fetchPostsIfNeeded(subreddit)).then(() => {
                                     expect(store.getActions()).toMatchObject(expectedActions)
                            })

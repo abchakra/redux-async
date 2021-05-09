@@ -53,21 +53,3 @@ export const fetchPostsIfNeeded = subreddit => (dispatch, getState) => {
     return dispatch(fetchPosts(subreddit))
   }
 }
-
-
-// const shouldFetchPosts = (state, subreddit) => {
-//   const posts = state.postsBySubreddit[subreddit]
-//   if (!posts) {
-//     return true
-//   }
-//   if (posts.isFetching) {
-//     return false
-//   }
-//   return posts.didInvalidate
-// }
-
-// export const fetchPostsIfNeeded = subreddit => (dispatch, getState) => {
-//   if (shouldFetchPosts(getState(), subreddit)) {
-//     return dispatch(fetchPosts(subreddit))
-//   }
-// }
